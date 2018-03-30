@@ -1,1 +1,1 @@
-hello-world
+Learning both Go and gRPC.
