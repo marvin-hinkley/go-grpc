@@ -1,0 +1,25 @@
+syntax = "proto3";
+package person;
+
+service PersonService{
+    rpc Speak (Void) returns (SpeakMessage);
+    rpc DyeHair (ColorMessage) returns (Void);
+    rpc GetPerson (Void) returns (PersonMessage);
+}
+
+message SpeakMessage {
+    string value = 1;
+}
+
+message ColorMessage {
+    string color = 1;
+}
+
+message PersonMessage {
+    string name = 1;
+    string eyeColor = 2;
+    string hairColor = 3;
+    uint32 height = 4;
+}
+
+message Void {}
